@@ -14,7 +14,7 @@ class _assaignment_sixState extends State<assaignment_six> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("My Profile"),
+        title: const Text("My Profile",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
         backgroundColor: Colors.white,
         leading: const Icon(Icons.arrow_back, color: Colors.black),
         actions: const [Icon(Icons.settings, color: Colors.black)],

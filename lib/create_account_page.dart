@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:textfield_screen/sam_screen.dart';
+import 'package:textfield_screen/login_page.dart';
+
+import 'before_samscreen.dart';
 
 class TextfieldScreensecond extends StatefulWidget {
   const TextfieldScreensecond({super.key});
@@ -11,7 +15,10 @@ class _TextfieldScreenState extends State<TextfieldScreensecond> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(centerTitle: true, backgroundColor: Colors.indigo),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.indigo.shade900,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(60.0),
         child: Column(
@@ -153,7 +160,14 @@ class _TextfieldScreenState extends State<TextfieldScreensecond> {
                   backgroundColor: Colors.indigo.shade900,
                 ),
 
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => (before_samscreen()),
+                    ),
+                  );
+                },
                 child: Text(
                   "Create account",
                   style: TextStyle(color: Colors.white, fontSize: 18),
@@ -202,10 +216,28 @@ class _TextfieldScreenState extends State<TextfieldScreensecond> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Alredy have an account", style: TextStyle(fontSize: 14)),
                 Text(
-                  "?Sign in",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                  "Alredy have an account ? ",
+                  style: TextStyle(fontSize: 14),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print('Log In button pressed!');
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => samscreen()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo.shade900,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  ),
+                  child: Text(
+                    "Log In",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ],
             ),

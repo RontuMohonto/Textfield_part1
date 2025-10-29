@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:textfield_screen/sam_screen.dart';
 
 class TextfieldScreen extends StatefulWidget {
   const TextfieldScreen({super.key});
@@ -11,14 +12,13 @@ class _TextfieldScreenState extends State<TextfieldScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back,color: Colors.white,),
-        actions: [
-          Icon(Icons.notification_add,color: Colors.white,)
-        ],
+        leading: Icon(Icons.arrow_back, color: Colors.white),
+        actions: [Icon(Icons.notification_add, color: Colors.white)],
         centerTitle: true,
         backgroundColor: Colors.indigo,
-        title: Text("Textfield screen", style: TextStyle(color: Colors.white)),
+        title: Text("Login Screen", style: TextStyle(color: Colors.white)),
       ),
       body: Center(
         child: Padding(
@@ -33,14 +33,14 @@ class _TextfieldScreenState extends State<TextfieldScreen> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
-                      "https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/hzzafik7dxaog0nk2inw",
+                      "https://thumbs.dreamstime.com/b/blue-login-button-white-text-transparent-background-modern-design-featuring-rounded-rectangle-word-bold-letters-406353880.jpg",
                     ),
                     fit: BoxFit.fill,
                   ),
                 ),
               ),
               Text(
-                "Create your account",
+                "Login here,",
                 style: TextStyle(
                   color: Colors.indigo,
                   fontSize: 30,
@@ -62,9 +62,12 @@ class _TextfieldScreenState extends State<TextfieldScreen> {
 
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.green, width: 1),
+                    borderSide: BorderSide(
+                      color: Colors.indigo.shade900,
+                      width: 1,
+                    ),
                   ),
-                  floatingLabelStyle: TextStyle(color: Colors.green),
+                  floatingLabelStyle: TextStyle(color: Colors.indigo.shade900),
                 ),
               ),
               TextField(
@@ -82,9 +85,12 @@ class _TextfieldScreenState extends State<TextfieldScreen> {
 
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.green, width: 1),
+                    borderSide: BorderSide(
+                      color: Colors.indigo.shade900,
+                      width: 1,
+                    ),
                   ),
-                  floatingLabelStyle: TextStyle(color: Colors.green),
+                  floatingLabelStyle: TextStyle(color: Colors.indigo.shade900),
                 ),
               ),
               TextField(
@@ -102,9 +108,12 @@ class _TextfieldScreenState extends State<TextfieldScreen> {
 
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.green, width: 1),
+                    borderSide: BorderSide(
+                      color: Colors.indigo.shade900,
+                      width: 1,
+                    ),
                   ),
-                  floatingLabelStyle: TextStyle(color: Colors.green),
+                  floatingLabelStyle: TextStyle(color: Colors.indigo.shade900),
                 ),
               ),
 
@@ -118,7 +127,7 @@ class _TextfieldScreenState extends State<TextfieldScreen> {
 
                   onPressed: () {},
                   child: Text(
-                    "Sign Up",
+                    "Log In",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),
@@ -129,7 +138,7 @@ class _TextfieldScreenState extends State<TextfieldScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Or sign up with",
+                    "Or Login with",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
 
